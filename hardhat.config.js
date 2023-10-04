@@ -1,6 +1,5 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
-import { getHardhatConfigNetworks } from "@zetachain/networks";
 module.exports = {
   solidity: "0.8.18",
   settings:{
@@ -11,10 +10,18 @@ module.exports = {
     viaIR: true
   },
   networks: {
-    mumbai: {
-      url: "https://alfajores-forno.celo-testnet.org",
-      accounts: [process.env.PRIVATE_KEY],
+    "telos-testnet": {
+      url: "https://testnet.telos.net/evm",
+      accounts: [process.env.PRIVATE_KEY]
     },
-    ...getHardhatConfigNetworks(),
+    "zeta-testnet": {
+      url: "https://rpc.ankr.com/zetachain_evm_athens_testnet",
+      accounts: [process.env.PRIVATE_KEY]
+    },
+
+    "bitfinity-testnet": {
+      url: "https://testnet.bitfinity.network/",
+      accounts: [process.env.PRIVATE_KEY]
+    },
   },
 };

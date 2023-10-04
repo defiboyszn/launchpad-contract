@@ -1,4 +1,1 @@
-# Vestfunds
-
-Vestfunds is a community-based investment platform
-
+0x7406573F80f16ffe594C73156393082d977915BE
